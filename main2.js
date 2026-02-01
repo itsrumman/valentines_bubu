@@ -89,15 +89,13 @@ function no() {
 
 function yes() {
     if (counter >= 3) {
-        const model = document.getElementById("model2");
-        const modelSad = document.getElementById("model");
-        const sadMusic = document.getElementById("sadMusic");
-        const happyMusic = document.getElementById("happyMusic");
-
+        let model = document.getElementById("model2");
+        let model2 = document.getElementById("model");
+        let sadMusic = document.getElementById("sadMusic");
         sadMusic.pause();
+        model2.style.display = "none";
+        let happyMusic = document.getElementById("happyMusic");
         happyMusic.play();
-
-        modelSad.style.display = "none";
         model.style.display = "none";
 
         const wedate = document.getElementById("wedate");
@@ -105,10 +103,9 @@ function yes() {
         btns.style.display = "none";
         wedate.innerText = "We are each other's valentine now. I love you cutie. ❤️😘";
 
-        // ────────────────────────────────────────────────
-        // This was the main bug — changed from index1.html
+        // Open valentine.html in a new tab (make sure filename matches exactly)
         window.open("valentine.html", "_blank");
-        // ────────────────────────────────────────────────
+
     } else {
         alert("Don't say yes right away, cutie. Play around a bit 😉😘");
     }
